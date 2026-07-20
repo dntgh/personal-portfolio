@@ -3,7 +3,6 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from '@/components/page-header';
-import Pager from '@/components/pager';
 import TimelineViewer from '@/components/timeline-viewer';
 import { experiences } from '@/constants/experience';
 
@@ -28,13 +27,7 @@ const ExperiencePage = () => {
 
       <TimelineViewer data={experiences} />
 
-      <Pager
-        prevHref="/skills-tools"
-        nextHref="/education"
-        prevTitle="Skills & Tools"
-        nextTitle="Education"
-      />
-    </>
+          </>
   );
 };
 export default ExperiencePage;

@@ -4,7 +4,6 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from '@/components/page-header';
-import Pager from '@/components/pager';
 import { Button } from '@/components/ui/button';
 import { siteConfig } from '@/config/site';
 import { ExternalLink, Mail } from 'lucide-react';
@@ -41,13 +40,7 @@ const IntroductionPage = async () => {
         </PageActions>
       </PageHeader>
 
-      <Pager
-        prevHref="/"
-        nextHref="/about"
-        prevTitle="Previous"
-        nextTitle="About Me"
-      />
-    </>
+          </>
   );
 };
 export default IntroductionPage;

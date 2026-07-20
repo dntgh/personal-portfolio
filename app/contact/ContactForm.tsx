@@ -3,9 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
-import { useActionState, useEffect, useState } from 'react';
+import { useState } from 'react';
 import { toast } from 'sonner';
-import { sendMessageServerAction } from '../actions/sendMailServerAction';
 
 const labelWithRequiredStar = ({ label }: { label: string }) => {
   return (
@@ -19,30 +18,20 @@ const labelWithRequiredStar = ({ label }: { label: string }) => {
 };
 
 const ContactForm = () => {
-  const [state, action, isPending] = useActionState(
-    sendMessageServerAction,
-    null
-  );
+  const isPending = false;
   const [formData, setFormData] = useState({
     fullname: '',
     email: '',
     message: '',
   });
 
-  useEffect(() => {
-    if (state?.success) {
-      toast.success(state.success);
-      setFormData({ fullname: '', email: '', message: '' });
-    }
-  }, [state?.success]);
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    toast.success('Form submission is currently a stub for static export. Please integrate a static form provider.');
+  };
 
-  useEffect(() => {
-    if (state?.error) {
-      toast.error(state.error);
-    }
-  }, [state?.error]);
   return (
-    <form action={action} className="space-y-6">
+    <form onSubmit={handleSubmit} className="space-y-6">
       <div className="space-y-4">
         {labelWithRequiredStar({ label: 'Name' })}
         <div className="space-y-1">
@@ -58,9 +47,6 @@ const ContactForm = () => {
               setFormData({ ...formData, fullname: e.target.value })
             }
           />
-          {state?.fullnameError && (
-            <span className="text-sm text-red-500">{state.fullnameError}</span>
-          )}
         </div>
       </div>
       <div className="space-y-4">
@@ -81,9 +67,6 @@ const ContactForm = () => {
           <span className="text-sm text-muted-foreground">
             Temporary emails are also accepted, unless you wish to hear back 😉
           </span>
-          {state?.emailError && (
-            <span className="text-sm text-red-500">{state.emailError}</span>
-          )}
         </div>
       </div>
       <div className="space-y-4">
@@ -100,9 +83,6 @@ const ContactForm = () => {
               setFormData({ ...formData, message: e.target.value })
             }
           />
-          {state?.messageError && (
-            <span className="text-sm text-red-500">{state.messageError}</span>
-          )}
         </div>
       </div>
 

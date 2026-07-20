@@ -3,7 +3,6 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from '@/components/page-header';
-import Pager from '@/components/pager';
 
 const AboutMePage = () => {
   return (
@@ -33,13 +32,7 @@ const AboutMePage = () => {
         </PageHeaderDescription>
       </PageHeader>
 
-      <Pager
-        prevHref="/"
-        nextHref="/projects"
-        prevTitle="Introduction"
-        nextTitle="Projects"
-      />
-    </>
+          </>
   );
 };
 export default AboutMePage;

@@ -1,5 +1,4 @@
 import { PageHeader, PageHeaderHeading } from '@/components/page-header';
-import Pager from '@/components/pager';
 import {
   Card,
   CardDescription,
@@ -43,13 +42,7 @@ const ProjectsPage = () => {
         ))}
       </div>
 
-      <Pager
-        prevHref="/about"
-        nextHref="/skills-tools"
-        prevTitle="About"
-        nextTitle="Skills & Tools"
-      />
-    </>
+          </>
   );
 };
 export default ProjectsPage;

@@ -4,7 +4,6 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from '@/components/page-header';
-import Pager from '@/components/pager';
 import { Badge } from '@/components/ui/badge';
 import { mySkills } from '@/constants';
 
@@ -42,13 +41,7 @@ const SkillsToolsPage = () => {
         ))}
       </div>
 
-      <Pager
-        prevHref="/projects"
-        nextHref="/experience"
-        prevTitle="Projects"
-        nextTitle="Experience"
-      />
-    </>
+          </>
   );
 };
 export default SkillsToolsPage;

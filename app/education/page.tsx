@@ -3,7 +3,6 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from '@/components/page-header';
-import Pager from '@/components/pager';
 import TimelineViewer from '@/components/timeline-viewer';
 import { education } from '@/constants/education';
 
@@ -31,13 +30,7 @@ const EducationPage = () => {
 
       <TimelineViewer data={education} />
 
-      <Pager
-        prevHref="/experience"
-        nextHref="/contact"
-        prevTitle="Experience"
-        nextTitle="Contact"
-      />
-    </>
+          </>
   );
 };
 export default EducationPage;
