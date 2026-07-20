@@ -11,9 +11,6 @@ const ExperiencePage = () => {
     <>
       <PageHeader className="mb-10">
         <PageHeaderHeading>Experience</PageHeaderHeading>
-        <PageHeaderHeading className="mt-2 text-muted-foreground">
-          You need it to get the job, but the job’s what gives it!
-        </PageHeaderHeading>
         <PageHeaderDescription>
           Throughout my journey as a developer, I have had the opportunity to
           work with cutting-edge technologies while also mastering the fine art

@@ -13,9 +13,6 @@ const ProjectsPage = () => {
     <>
       <PageHeader className="mb-10">
         <PageHeaderHeading>Projects</PageHeaderHeading>
-        <PageHeaderHeading className="mt-2 text-muted-foreground">
-          A lot of ideas, but some are still under construction!
-        </PageHeaderHeading>
       </PageHeader>
 
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 card-container">
